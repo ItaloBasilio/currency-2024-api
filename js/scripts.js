@@ -49,6 +49,18 @@ getButton.addEventListener("click", e => {
     getExchangeRate();
 });
 
+
+const exchangeIcon = document.querySelector(".drop-list .icon");
+exchangeIcon.addEventListener("click", ()=>{
+    let tempCode = fromCurrency.value;
+    fromCurrency.value = toCurrency.value;
+    toCurrency.value = tempCode;
+    loadFlag(fromCurrency);
+    loadFlag(toCurrency);
+    getExchangeRate();
+
+})
+
 // Função para obter a taxa de câmbio
 function getExchangeRate() {
     const amount = document.querySelector(".amount input");
