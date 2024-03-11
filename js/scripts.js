@@ -33,7 +33,7 @@ function loadFlag(element) {
     for (code in country_code) {
         if (code == element.value) {
             let imgTag = element.parentElement.querySelector("img");
-            imgTag.src = `/node_modules/flag-icons/flags/1x1/${country_code[code]}.svg`;
+            imgTag.src = `/Assets/flag-icons/flags/1x1/${country_code[code]}.svg`;
         }
     }
 }
